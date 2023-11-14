@@ -75,7 +75,6 @@ const getAllData = async contractInstance => {
   const filtered = allPubs.filter(pub => pub.includes(pub_prefix))
 
   const cids = await Promise.all(filtered.map(async pub => {
-  console.log('file: index.js:83 -> pub:', pub)
   const deals = await contractInstance.latestNDeals(pub, 1)
 
     return deals[0][2]
