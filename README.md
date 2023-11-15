@@ -3,6 +3,8 @@
 ## Install
 - In the root of the project run `npm install`
 
+**_NOTE:_** If you want to pull hot data (data that have not yet been added into the Basin FVM data index) you need to install the [Basin CLI](https://github.com/tablelandnetwork/basin-cli/tree/main)
+
 ## Usage
 ```
 node ./src/index.js --help
@@ -16,7 +18,10 @@ Options
 --from string   Ignore unless the mode is "range". The day from which to      
                 fetch data (eg. 2023_10_15)                                   
 --to string     Ignore unless the mode is "range". The day up to which to     
-                fetch data (eg. 2023_10_15)  
+                fetch data (eg. 2023_10_15)                                   
+--hot string    Boolean flag indicating if hot data should be fetched. Dat    
+                are considered hot before they have added in the Basin FVM    
+                data index
 ```
 
 ### Example usage
